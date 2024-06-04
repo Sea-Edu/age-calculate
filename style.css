@@ -1,0 +1,143 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 40%;
+    height: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom-right-radius: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 2em;
+}
+
+.input-container input {
+    width: 60px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.input-container button {
+    position: absolute;
+    background-color: #6a0dad;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 32px;
+    padding: 12px 15px;
+    cursor: pointer;
+    bottom: -20px;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    --moz-appearance: textfield;
+}
+
+
+.icon {
+    font-size: 28px;
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 0;
+    color: #6a0dad;
+}
+
+.output-container {
+    padding-left: 2em;
+    text-align: start;
+}
+
+.output-container p {
+    font-size: 42px;
+    margin: 10px 0;
+    color: #6a0dad;
+    font-weight: 900;
+}
+
+.output-container_text {
+    color: black;
+}
+
+@media (max-width: 956px) {
+    .icon {
+        top: 80%;
+        left: 70%;
+    }
+
+    .input-container button {
+        font-size: 25px;
+        padding: 9px 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 70%;
+    }
+
+    .input-container button {
+        font-size: 28px;
+        padding: 10px 12px;
+    }
+
+    .output-container p {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .icon {
+        /* right: -5px; */
+        top: 72px;
+        left: 65%;
+    }
+
+    .input-container button {
+        font-size: 25px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .icon {
+        left: 86%;
+    }
+}
+
+@media (max-width: 320px) {
+    .icon {
+        top: 70px;
+        left: 82%;
+    }
+}
