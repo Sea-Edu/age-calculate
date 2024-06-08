@@ -20,7 +20,10 @@ function calculateAge() {
 
   if (ageDays < 0) {
     ageMonths -= 1;
-    ageDays += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+    const previousMonth = today.getMonth() === 0 ? 11 : today.getMonth() - 1;
+    const previousMonthYear =
+      today.getMonth() === 0 ? today.getFullYear() - 1 : today.getFullYear();
+    ageDays += new Date(previousMonthYear, previousMonth + 1, 0).getDate();
   }
 
   if (ageMonths < 0) {
@@ -34,14 +37,7 @@ function calculateAge() {
 }
 
 function isValidDate(day, month, year) {
-  if (
-    day < 1 ||
-    day > 31 ||
-    month < 1 ||
-    month > 12 ||
-    year < 1900 ||
-    year > 9999
-  ) {
+  if (day < 1 || month < 1 || month > 12 || year < 100 || year > 9999) {
     return false;
   }
   const date = new Date(year, month - 1, day);

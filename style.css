@@ -79,10 +79,10 @@ input[type=number] {
 }
 
 .output-container p {
-    font-size: 42px;
+    font-size: 3vw;
     margin: 10px 0;
     color: #6a0dad;
-    font-weight: 900;
+    font-weight: 900;   
 }
 
 .output-container_text {
@@ -129,9 +129,10 @@ input[type=number] {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 440px) {
     .icon {
         left: 86%;
+        /* font-size: 20px; */
     }
 }
 
